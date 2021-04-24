@@ -62,7 +62,7 @@ uname -a
 Find and download the file matching the system, and check the hash
 
 ```
-curl -L https://golang.org/dl/go1.14.5.linux-amd64.tar.gz > go1.14.5.linux-amd64.tar.gz
+curl -OL https://golang.org/dl/go1.14.5.linux-amd64.tar.gz
 sha256sum go1.14.5.linux-amd64.tar.gz
 ```
 
