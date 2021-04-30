@@ -53,46 +53,7 @@ Installed via command `sudo apt install git`
 
 #### 🐿️Go
 
-Check the system.
-
-```
-uname -a
-```
-
-Find and download the file matching the system, and check the hash
-
-```
-curl -OL https://golang.org/dl/go1.14.5.linux-amd64.tar.gz
-sha256sum go1.14.5.linux-amd64.tar.gz
-```
-
-Install and configure
-
-```
-tar -zvxf go1.14.5.linux-amd64.tar.gz
-sudo mv go /usr/local
-vi ~/.profile
-```
-
-Add the following codes on the bottom of the file `.profile`
-
-```
-export GOPATH=$HOME/work
-export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
-```
-
-Refresh it
-
-```
-source ~/.profile
-```
-
-Check go version and env
-
-```
-go version
-go env
-```
+Installed via [glv](https://github.com/tourcoder/glv)
 
 #### 🦨NodeJS
 
