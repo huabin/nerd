@@ -78,7 +78,7 @@ sudo usermod -s /usr/bin/zsh $(whoami)
 Set ZSH as the default login shell for the logged in user
 
 ```
-sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
 Install Oh-my-zsh via the above command. 
