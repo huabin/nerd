@@ -53,7 +53,7 @@ Installed via command `sudo apt install git`
 
 #### 🐿️Go
 
-Installed via [glv](https://github.com/tourcoder/glv)
+Installed via [glv](https://github.com/glv-go/glv)
 
 #### 🦨NodeJS
 
