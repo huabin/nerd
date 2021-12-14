@@ -85,3 +85,6 @@ Install Oh-my-zsh via the above command.
 
 Restart the server and done.
 
+#### 🔗How to connect to Nerd
+
+Usually, I use two ways to connect to Nerd, [Mosh](https://mosh.org) and [VSCode](https://code.visualstudio.com) with extension [Remote-SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh).
