@@ -25,7 +25,7 @@ Second, hosts
 sudo vi /etc/cloud/templates/hosts.debian.tmpl
 ```
 
-You should change this file, not `/etc/hosts`.
+You should change this file, not `/etc/hosts`. Add `127.0.0.1 nerd`
 
 #### 👦User
 
