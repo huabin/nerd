@@ -34,6 +34,70 @@ sudo sed -ri 's/^#?(PasswordAuthentication)\s+(yes|no)/\1 yes/' /etc/ssh/sshd_co
 sudo service sshd restart
 ```
 
+#### 🔑Authentication Key
+
+Sometimes a connection with an authentication key is more stable and secure than a connection with a password.
+
+```
+ssh-keygen -t rsa -C "code@tourcoder.com" -f "~/.ssh/id_rsa_nerd"
+```
+
+Highly recommended to set a password for your key.
+
+```
+cat id_rsa.pub >> authorized_keys
+chmod 600 authorized_keys
+chmod 700 ~/.ssh
+```
+
+Download the file `id_rsa_nerd` and keep it.
+
+#### 🔐Safe
+
+In any case, remote login with root should be disabled. Change `PermitRootLogin` to `no`.
+
+```
+sudo sed -E -i 's/^(#\s*)?PermitRootLogin\s+\b(yes|no)\b/PermitRootLogin no/' /etc/ssh/sshd_config
+```
+
+**UFW**
+
+```
+apt install ufw -y
+ufw enable
+ufw status
+ufw allow app_name //allowing an application to pass
+ufw app list //allowed list
+ufw allow port //allowing port to pass
+```
+
+**fail2ban**
+
+```
+apt install fail2ban -y
+systemctl enable fail2ban
+```
+
+```
+cd /etc/fail2ban
+cp jail.conf jail.local
+vi jail.local
+```
+
+Edit the local jail file, and set
+
+```
+bantime = 86400 // ban for 24 hours
+banaction = ufw // use what ufw allows
+```
+
+```
+service fail2ban restart
+fail2ban-client ping
+```
+
+Restart and check if the configuration is working. 
+
 #### 🐳Docker
 
 Installed via [Dockerman](https://github.com/tourcoder/dockerman)
@@ -96,8 +160,16 @@ Usually, I use two ways to connect to nerd, [Mosh](https://mosh.org) and [VSCode
 
   **Connect**
   
+  Connect with a password
+  
   ```
   mosh nerdone@nerd
+  ```
+  
+  or connect with authentication key
+  
+  ```
+  mosh -i id_rsa_nerd nerdone@nerd
   ```
   
   Need to open UDP port `60000-65535`.
