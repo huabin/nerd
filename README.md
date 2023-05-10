@@ -100,5 +100,5 @@ Usually, I use two ways to connect to nerd, [Mosh](https://mosh.org) and [VSCode
   mosh nerdone@nerd
   ```
   
-  Need to open port `60000-65535`.
+  Need to open UDP port `60000-65535`.
   
