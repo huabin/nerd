@@ -76,6 +76,29 @@ Install Oh-my-zsh via the above command.
 
 Restart the server and done.
 
-#### 🔗How to connect to Nerd
+#### 🔗How to connect to nerd
 
-Usually, I use two ways to connect to Nerd, [Mosh](https://mosh.org) and [VSCode](https://code.visualstudio.com) with extension [Remote-SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh).
+Usually, I use two ways to connect to nerd, [Mosh](https://mosh.org) and [VSCode](https://code.visualstudio.com) with extension [Remote-SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh).
+
+- Mosh
+
+  **Install mosh on nerd**
+
+  ```
+  apt install mosh -y
+  ```
+
+  **Install mosh on macOS**
+
+  ```
+  brew install mosh
+  ```
+
+  **Connect**
+  
+  ```
+  mosh nerdone@nerd
+  ```
+  
+  Need to open port `60000-65535`.
+  
