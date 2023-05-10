@@ -5,27 +5,18 @@ I used to use a VM on [Google Cloud](https://cloud.google.com) as my development
 
 #### 💻OS
 
-Debian 9.5
+Debian 11
 
-Linux nerd 4.9.0-12-amd64 #1 SMP Debian 4.9.210-1+deb9u1 (2020-06-07) x86_64 GNU/Linux
+Linux nerd 5.10.0-22-cloud-amd64 #1 SMP Debian 5.10.178-3 (2023-04-22) x86_64 GNU/Linux
 
 #### 🌟Name
 
-Its name is `nerd`, there are two places that need to be changed.
-
-First, hostname
+Its name is `nerd`, there are two places that need to be changed. 
 
 ```
-sudo vi /etc/hostname
+echo 'nerd'>/etc/hostname
+echo '127.0.0.1 nerd'>>/etc/cloud/templates/hosts.debian.tmpl //optional since Debian 10
 ```
-
-Second, hosts
-
-```
-sudo vi /etc/cloud/templates/hosts.debian.tmpl
-```
-
-You should change this file, not `/etc/hosts`. Add `127.0.0.1 nerd`
 
 #### 👦User
 
