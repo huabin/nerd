@@ -112,7 +112,7 @@ Installed via [glv](https://github.com/glv-go/glv)
 
 #### 🦨NodeJS
 
-Installed via [nvm-sh](https://github.com/nvm-sh/nvm)
+Installed via [fnm](https://fnm.vercel.app)
 
 #### 🐚Shell
 
