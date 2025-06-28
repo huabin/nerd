@@ -64,11 +64,13 @@ sudo sed -E -i 's/^(#\s*)?PermitRootLogin\s+\b(yes|no)\b/PermitRootLogin no/' /e
 
 ```
 apt install ufw -y
-ufw enable
-ufw status
-ufw allow app_name //allowing an application to pass
+ufw default deny incoming //Set the default policy to deny
+ufw default allow outgoing //But treat existing connections conservatively
 ufw app list //allowed list
-ufw allow port //allowing port to pass
+ufw allow app_name //allowing an application to pass, such as OpenSSH
+ufw allow port //allowing port to pass, don't forget 22
+ufw status //before enable, must check if 22/ssh/openssh exist
+ufw enable
 ```
 
 **fail2ban**
