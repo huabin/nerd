@@ -70,7 +70,7 @@ ufw app list //allowed list
 ufw allow app_name //allowing an application to pass, such as OpenSSH
 ufw allow port //allowing port to pass, don't forget 22
 ufw status //before enable, must check if 22/ssh/openssh exist
-ufw enable
+ufw enable/disable
 ```
 
 **fail2ban**
